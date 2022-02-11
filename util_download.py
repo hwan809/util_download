@@ -16,5 +16,29 @@ def python(util):
 
 def java(util):
     util.install_by_link('ja.exe')
-    os.system('temp\\ja.exe /S')
+    os.system('temp\\ja.exe /s')
     os.remove('temp\\ja.exe')
+
+
+def intellij(util):
+    util.install_by_link('ij.exe')
+    os.system('temp\\ij.exe /S /CONFIG=silent.config')
+    os.remove('temp\\ij.exe')
+
+
+def discord(util):
+    util.install_by_link('dc.exe')
+    os.system('temp\\dc.exe -s')
+    os.remove('dc.exe')
+
+
+def steam(util):
+    util.install_by_link('st.exe')
+    os.system('temp\\st.exe /S')
+    os.remove('st.exe')
+
+
+def obs(util):
+    util.install_by_link('ob.exe')
+    os.system('temp\\ob.exe /S')
+    os.remove('ob.exe')

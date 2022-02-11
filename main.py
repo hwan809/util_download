@@ -15,6 +15,10 @@ SIDE_BAR_STR = SIDE_BAR * SIDE_BAR_LENGTH
 DOWNLOAD_LINK_KAKAO = 'https://app-pc.kakaocdn.net/talk/win32/KakaoTalk_Setup.exe'
 DOWNLOAD_LINK_PYTHON = 'https://www.python.org/ftp/python/3.10.2/python-3.10.2-amd64.exe'
 DOWNLOAD_LINK_JAVA = 'https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe'
+DOWNLOAD_LINK_INTELLIJ = 'https://download-cdn.jetbrains.com/idea/ideaIC-2021.3.2.exe'
+DOWNLOAD_LINK_DISCORD = 'https://dl.discordapp.net/distro/app/stable/win/x86/1.0.9003/DiscordSetup.exe'
+DOWNLOAD_LINK_STEAM = 'https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe'
+DOWNLOAD_LINK_OBS = 'https://cdn-fastly.obsproject.com/downloads/OBS-Studio-27.1.3-Full-Installer-x64.exe'
 
 
 UTIL_LIST = []
@@ -60,6 +64,10 @@ def set_util_list():
     UTIL_LIST.append(Util('카카오톡', 'K', DOWNLOAD_LINK_KAKAO, util_download.kakao))
     UTIL_LIST.append(Util('Python', 'P', DOWNLOAD_LINK_PYTHON, util_download.python))
     UTIL_LIST.append(Util('Java SDK', 'J', DOWNLOAD_LINK_JAVA, util_download.java))
+    UTIL_LIST.append(Util('IntelliJ Community', 'I', DOWNLOAD_LINK_INTELLIJ, util_download.intellij))
+    UTIL_LIST.append(Util('Discord', 'D', DOWNLOAD_LINK_DISCORD, util_download.discord))
+    UTIL_LIST.append(Util('Steam', 'S', DOWNLOAD_LINK_STEAM, util_download.steam))
+    UTIL_LIST.append(Util('OBS', 'O', DOWNLOAD_LINK_OBS, util_download.obs))
 
 
 def main():
@@ -69,8 +77,10 @@ def main():
           ' ## 유용 유틸 설치 By Vivace 22.02.12 ##' + '\n' +
           ' ' + SIDE_BAR_STR + '\n' +
           '\n' +
-          ' [K] 카카오톡\n' 
-          ' [PY] 파이썬\n')
+          ' [K] KakaoTalk              [P] Python 3.10.2\n' 
+          ' [J] Java SDK 16.0.2        [I] IntelliJ Community 2021.3\n'
+          ' [D] Discord                [S] Steam Game\n'
+          ' [O] OBS 27.1.3\n')
 
     code = input(' [설치하실 프로그램을 선택해 주세요]: ')
     return code
